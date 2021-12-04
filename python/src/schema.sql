@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS activities(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    duration INTEGER NOT NULL,
+    distance INTEGER NOT NULL,
+    date TEXT NOT NULL,
+    name TEXT NOT NULL
+);
