@@ -1,5 +1,3 @@
-
-
 process.env.NODE_ENV = "test";
 
 const request = require("supertest");
@@ -24,8 +22,21 @@ describe("GET / ", () => {
 
 describe("POST /", () => {
     test("IT should return 'Record Added'", async () => {
-        const response = await request(app).post("/activity").send({ id: "111", name: "Arsalan" });
+        const response = await request(app).post("/activity").send({
+            id: 111,
+            name: "Arsalan",
+            date: "3 Mar 2019",
+            time: 45,
+            distance: 10,
+        });
         expect(response.text).toEqual("Record Added!");
+    });
+});
+
+describe("GET /asdf (invalid)", () => {
+    test("It should return 404", async () => {
+        const response = await request(app).get("/activity/asdf");
+        expect(response.statusCode).toBe(404);
     });
 });
 
