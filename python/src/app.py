@@ -10,9 +10,6 @@ app = Flask(__name__)
 def hello():
     return 'Hello World'
 
-# NOT WORKING
-
-
 @ app.route('/activity', methods=['POST'])
 def activity():
     db = get_db()
