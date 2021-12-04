@@ -29,7 +29,7 @@ def activity():
 def activities():
     db = get_db()
     activities = db.execute('SELECT * FROM activity').fetchall()
-    return jsonify([activities])
+    return jsonify(activities)
 
 
 if __name__ == "__main__":

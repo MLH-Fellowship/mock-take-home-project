@@ -9,7 +9,7 @@ def test_status():
 def test_response():
     assert type([]) == type(requests.get(
         'http://localhost:5000/activity').json())
-    # assert [] == requests.get('http://localhost:5000/activity').json()
+    assert [] == requests.get('http://localhost:5000/activity').json()
 
 
 def test_post():
