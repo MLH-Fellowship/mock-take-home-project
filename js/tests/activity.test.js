@@ -23,7 +23,7 @@ describe("GET / ", () => {
 });
 
 describe("POST /", () => {
-    test("IT should return 'Record Added'", async () => {
+    test("It should return 'Record Added'", async () => {
         const response = await request(app).post("/activity").send({ id: "111", name: "Arsalan" });
         expect(response.text).toEqual("Record Added!");
     });
