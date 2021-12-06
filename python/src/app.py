@@ -1,7 +1,7 @@
 import json
 from flask import Flask, jsonify, request
-import logging
 from db import create_tables, get_db
+import json
 
 app = Flask(__name__)
 
@@ -10,16 +10,21 @@ app = Flask(__name__)
 def hello():
     return 'Hello World'
 
+
 @ app.route('/activity', methods=['POST'])
 def activity():
-    db = get_db()
-    data = request.get_data()
-    data = json.loads(data)
-    db.execute('INSERT INTO activity (date, name, duration, distance) VALUES (?, ?, ?, ?)',
-               (data['date'], data['name'], data['duration'], data['distance']))
-    db.commit()
-    msg = "Record Added!"
-    return msg, 200
+    try:
+        # convert text data into json
+        data = request.get_json()
+        db = get_db()
+        db.execute('INSERT INTO activity (date, name, duration, distance) VALUES (?, ?, ?, ?)',
+                   [data['date'], data['name'], data['duration'], data['distance']])
+        db.commit()
+        msg = "Record Added!"
+        return msg, 200
+    except Exception as e:
+        msg = "Error: " + str(e)
+        return msg, 500
 
 
 @ app.route('/activity', methods=['GET'])
