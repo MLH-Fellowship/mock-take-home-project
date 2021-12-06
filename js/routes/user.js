@@ -1,7 +1,10 @@
 const express = require("express");
 const router = express.Router();
+const Sqlite = require("sqlite3");
 
 router.get("/", function (req, res) {
+  const db = new Sqlite.Database("database/activity.db");
+
   var sql = "select * from activity";
   var params = [];
   db.all(sql, params, (err, rows) => {
@@ -17,6 +20,8 @@ router.get("/", function (req, res) {
 });
 
 router.post("/", (res, req) => {
+  const db = new Sqlite.Database("database/activity.db");
+
   var data = {
     name: req.body.name,
     date: req.body.date,
