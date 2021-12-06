@@ -17,15 +17,14 @@ router.get("/", function (req, res) {
 });
 
 router.post("/", (res, req) => {
-  var errors = [];
-
   var data = {
     name: req.body.name,
     date: req.body.date,
     time: req.body.time,
     distance: req.body.distance,
   };
-  var sql = "INSERT INTO user (date, name, time, distance) VALUES (?,?,?,?)";
+  var sql =
+    "INSERT INTO activity (date, name, time, distance) VALUES (?,?,?,?)";
   var params = [data.date, data.name, data.time, data.distance];
   db.run(sql, params, function (err, result) {
     if (err) {
