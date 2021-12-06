@@ -2,11 +2,13 @@ from flask import Flask, Response, jsonify, request, abort, g
 from contextlib import closing
 import json 
 import re
+import os
 import sqlite3
 
 DATABASE = 'sporthub.db'
 
 app = Flask(__name__)
+app.config["DATABASE"] = DATABASE
 
 def connect_db():
     return sqlite3.connect(app.config['DATABASE'])
@@ -71,7 +73,7 @@ def activity():
     else:
         return "Error!", 400
 
-
 if __name__ == "__main__":
-    app.config["DATABASE"] = DATABASE
+    if not os.path.exists("sporthub.db"):
+        init_db()
     app.run(debug=True)
