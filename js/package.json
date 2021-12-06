@@ -4,7 +4,8 @@
   "description": "This repository is used for the Cracking the Coding Interview - APIs. We'll be covering how to build an API during this session, with the chance for you to work in small teams to build solutions to a number of test cases.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,12 @@
   },
   "homepage": "https://github.com/nandinibansal2000/interview-practice-apis#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "jest": "^27.4.3"
+    "jest": "^27.4.3",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
