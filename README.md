@@ -21,7 +21,7 @@ Each track record should have the following fields:
 There's a number of tests we need to pass. These include:
 - Successfully respond with a 200
 - Records should return list activities as array
-- New command should return nerly added activities
+- New command should return newly added activities
 - An API call to any of the command with incomplete value should return 400.
 
 Some of these tests will need to be written by you to make sure your code is robust. You should write these before you start working on those features.
