@@ -6,6 +6,6 @@ app = Flask(__name__)
 def index():
     return "Welcome to Sports Hub!"
 
-@app.route('/activity', ['GET', 'POST'])
+@app.route('/activity', methods=['GET', 'POST'])
 def activity():
-    return "Error!"
+    return "Record Added!"

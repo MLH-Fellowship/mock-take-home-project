@@ -1,12 +1,14 @@
-# Cracking the Coding Interview - APIs
+# Mock Take Home Project - APIs
 
-This repository is used for the Cracking the Coding Interview - APIs. We'll be covering how to build an API during this session, with the chance for you to work in small teams to build solutions to a number of test cases.
+This template repository will be used for the Mock Take Home Project. Every time you push a change, a set of tests will be run against your code. 
+
+You can chose to write this in JavaScript or Python. There will be 4 tests for each language, meaning there will be 8 tests. You only need to get 4 tests from the same language to pass. You're welcome to complete this in both languages to get additional practice!
 
 ## Prompt
 
 We're going to be building an API for a Sports Hub. They want to track daily sport activities record, for example running or cycling times.
 
-We need an API that can process the track records to our database. We'll need to build one!
+We need an API that can process the track records. We'll need to build one!
 
 ## Track Record
 
@@ -24,8 +26,25 @@ There's a number of tests we need to pass. These include:
 - New command should return newly added activities
 - An API call to any of the command with incomplete value should return 400.
 
-Some of these tests will need to be written by you to make sure your code is robust. You should write these before you start working on those features.
+Tests have been provided already. A database is not required for this example, and you should use a data structure inside your code to store data during the autograder.
+
+You may be required to implement a database in a real take home project so it's encouraged you practice those.
+
+To run the Python tests, run the following commands inside of the `python` directory:
+```
+cd python && sudo -H pip3 install pytest
+pytest
+```
+
+To run the JavaScript tests, run the following commands inside of the `js` directory:
+
+```
+cd js && npm install
+npm test
+```
 
 ## Submission
 
-To work on this, you should fork this repository and make a Pull Request with your changes at the end of the session! On your fork, invite your team and just submit your single fork (we can see who's worked on what)
+Commit and push your changes to GitHub and it will get autograded. Once 4 of the tests from one of the languages passes, you've completed it!
+
+We will be checking solutions to ensure they aren't using harcoded values. At the end of the day, this exercise is to help you!
