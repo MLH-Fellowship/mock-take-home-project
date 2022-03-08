@@ -16,9 +16,3 @@ pip install -r requirements.txt
 export FLASK_APP=src/app.py
 flask run
 ```
-
-### Run the tests (while the API is already running)
-
-```
-pytest tests/tests.py
-```
