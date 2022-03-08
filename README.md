@@ -1,8 +1,8 @@
 # Mock Take Home Project - APIs
 
-This template repository will be used for the Mock Take Home Project. Every time you push a change, a set of tests will be run against your code. 
+This template repository will be used for the Mock Take Home Project.
 
-You can chose to write this in JavaScript or Python. There will be 4 tests for each language, meaning there will be 8 tests. You only need to get 4 tests from the same language to pass. You're welcome to complete this in both languages to get additional practice!
+There's a Python and JavaScript repository to give you something to work with. You should use the language most used with your project.
 
 ## Prompt
 
@@ -13,38 +13,24 @@ We need an API that can process the track records. We'll need to build one!
 ## Track Record
 
 Each track record should have the following fields:
-- Date of activity
-- Activity name (Running, Cycle)
-- Time duration (e.g. 45 minutes)
-- Distance (e.g. 10 kilometers)
+- ID (integer, e.g. 1)
+- Date of activity (YYYY-MM-DD, e.g. 2022-03-08)
+- Activity name (String .g. Running, Cycle)
+- Time duration (integer in minutes e.g. 45 minutes)
+- Distance (float in kilometers e.g. 10 kilometers)
 
 ## Tests
 
-There's a number of tests we need to pass. These include:
-- Successfully respond with a 200
-- Records should return list activities as array
-- New command should return newly added activities
-- An API call to any of the command with incomplete value should return 400.
+There's a number of test cases we need to ensure work. These include:
+- Successful API calls will respond with a 200 status
+- `/activities` records should return list activities as an array
+- `/activities/new` will add a new activities to the array
+- `/activities/change/<id>` will add a modify an activity in the array
+- `/activities/delete/<id>` will add a delete activities in the array
+- API calls with incorrect inputs (wrong input variables or data types) will return a 400 status
 
-Tests have been provided already. A database is not required for this example, and you should use a data structure inside your code to store data during the autograder.
-
-You may be required to implement a database in a real take home project so it's encouraged you practice those.
-
-To run the Python tests, run the following commands inside of the `python` directory:
-```
-cd python && sudo -H pip3 install pytest
-pytest
-```
-
-To run the JavaScript tests, run the following commands inside of the `js` directory:
-
-```
-cd js && npm install
-npm test
-```
+You're encouraged to write your own tests to ensure it works. A database is not required for this example but you're encouraged to add one to help build your skillset!
 
 ## Submission
 
-Commit and push your changes to GitHub and it will get autograded. Once 4 of the tests from one of the languages passes, you've completed it!
-
-We will be checking solutions to ensure they aren't using harcoded values. At the end of the day, this exercise is to help you!
+Commit and push your changes to this repository. Make a Pull Request that your Pod Leader can leave feedback on when you're ready. You should invite them to the repository and tag them in your Pull Request when you're ready to get feedback.
