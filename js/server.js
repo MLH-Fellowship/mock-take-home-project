@@ -24,6 +24,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/activities", (req, res) => {
+  // Complete me
   res.send("Record Fetched!");
 });
 
@@ -39,7 +40,7 @@ app.put("/activities/change/:id", (req, res) => {
   res.send("Activity changed!");
 });
 
-app.put("/activities/delete/:id", (req, res) => {
+app.delete("/activities/delete/:id", (req, res) => {
   // Complete me
   // Delete an activity inside of the activities array
   res.send("Activity deleted!");
