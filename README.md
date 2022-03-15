@@ -29,8 +29,12 @@ There's a number of test cases we need to ensure work. These include:
 - DELETE `/activities/<id>` will add a delete activities in the array
 - API calls with incorrect inputs (wrong input variables or data types) will return a 400 status
 
-You're encouraged to write your own tests to ensure it works. A database is not required for this example but you're encouraged to add one to help build your skillset!
+You are **required to write tests** to ensure your solution works. A database is not required for this example but you're encouraged to add one to help build your skillset!
 
 ## Submission
 
-Commit and push your changes to this repository. Make a Pull Request that your Pod Leader can leave feedback on when you're ready. You should invite them to the repository and tag them in your Pull Request when you're ready to get feedback.
+You'll be making your own version of this using GitHub Classroom.
+
+ - [] Commit and push your changes to this repository. 
+ - [] Make a Pull Request so that your Pod Leader can leave feedback on when you're ready. 
+ - [] Invite your pod leader to the repository and tag them in your Pull Request when you're ready to get feedback.
