@@ -28,19 +28,19 @@ app.get("/activities", (req, res) => {
   res.send("Record Fetched!");
 });
 
-app.post("/activities/new", (req, res) => {
+app.post("/activities", (req, res) => {
   // Complete me
   // Add a new activitiy to the activites array
   res.send("Add record!");
 });
 
-app.put("/activities/change/:id", (req, res) => {
+app.put("/activities/:id", (req, res) => {
   // Complete me
   // Change the data for an activity inside of the activities array
   res.send("Activity changed!");
 });
 
-app.delete("/activities/delete/:id", (req, res) => {
+app.delete("/activities/:id", (req, res) => {
   // Complete me
   // Delete an activity inside of the activities array
   res.send("Activity deleted!");

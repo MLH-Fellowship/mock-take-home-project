@@ -23,10 +23,10 @@ Each track record should have the following fields:
 
 There's a number of test cases we need to ensure work. These include:
 - Successful API calls will respond with a 200 status
-- `/activities` records should return list activities as an array
-- `/activities/new` will add a new activities to the array
-- `/activities/change/<id>` will add a modify an activity in the array
-- `/activities/delete/<id>` will add a delete activities in the array
+- GET `/activities` records should return list activities as an array
+- POST `/activities` will add a new activities to the array
+- PUT `/activities/<id>` will add a modify an activity in the array
+- DELETE `/activities/<id>` will add a delete activities in the array
 - API calls with incorrect inputs (wrong input variables or data types) will return a 400 status
 
 You're encouraged to write your own tests to ensure it works. A database is not required for this example but you're encouraged to add one to help build your skillset!
