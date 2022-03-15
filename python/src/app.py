@@ -28,19 +28,19 @@ def get_activities():
     # Complete me
     return "Record Added!"
 
-@app.route('/activities/new', methods=['GET'])
+@app.route('/activities', methods=['POST'])
 def add_activity():
     # Complete me
     # Add a new activity to the activities array
     return "Add record!"
 
-@app.route('/activities/change/<id>', methods=['GET'])
+@app.route('/activities/<id>', methods=['PUT'])
 def change_activity(id):
     # Complete me
     # Change the data for an activity inside of the activities array
     return "Activity changed!"
 
-@app.route('/activities/delete/<id>', methods=['GET'])
+@app.route('/activities/<id>', methods=['DELETE'])
 def delete_activity(id):
     # Complete me
     # Delete an activity inside of the activities array
